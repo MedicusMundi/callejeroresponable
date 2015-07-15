@@ -5,6 +5,7 @@ angular.module('starter').controller('MapController',
     '$ionicModal',
     '$ionicPopup',
     'LocationsService',
+    'ComerciosService',
     'InstructionsService',
     function(
       $scope,
@@ -13,6 +14,7 @@ angular.module('starter').controller('MapController',
       $ionicModal,
       $ionicPopup,
       LocationsService,
+      ComerciosService,
       InstructionsService
       ) {
 
@@ -21,7 +23,7 @@ angular.module('starter').controller('MapController',
        */
       $scope.$on("$stateChangeSuccess", function() {
 		console.log("Hemos cambiado a mapa");
-        $scope.locations = LocationsService.savedLocations;
+        $scope.locations = ComerciosService.lista;
         $scope.newLocation;
 
         //~ if(!InstructionsService.instructions.newLocations.seen) {
@@ -50,12 +52,22 @@ angular.module('starter').controller('MapController',
             }
           }
         };
+        console.log(ComerciosService);
+        for (comercio in ComerciosService) {
+			console.log("Añadiendo comercio");
+			$scope.map.markers[comercio.id] = {
+			  lat:comercio.lat,
+			  lng:comercio.lng,
+			  message: comercio.nombre ,
+			  draggable: false
+			};
+		}
 
         //$scope.goTo(0);
         console.log("Centramos el mapa en vito");
         $scope.map.center  = {
-          lat : "42.847363",
-          lng : "-2.6734835",
+          lat : 42.847363,
+          lng : -2.6734835,
           zoom : 12
         };
 
@@ -85,7 +97,7 @@ angular.module('starter').controller('MapController',
         $scope.modal.show();
       });
 
-      $scope.saveLocation = function() {
+      $scope.comercios = function() {
         LocationsService.savedLocations.push($scope.newLocation);
         $scope.modal.hide();
         $scope.goTo(LocationsService.savedLocations.length - 1);
