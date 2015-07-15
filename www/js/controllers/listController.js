@@ -3,26 +3,24 @@ angular.module('starter').controller('ListController',
     '$stateParams',
     '$ionicModal',
     '$ionicPopup',
+    'ComerciosService',
     function(
       $scope,
       $stateParams,
       $ionicModal,
-      $ionicPopup
+      $ionicPopup,
+      ComerciosService
       ) {
       /**
        *
        */
       $scope.$on("$stateChangeSuccess", function() {		
 		console.log("Hemos cambiado a la vista de lista")
+		$scope.locations = ComerciosService;
       });
 
-      var Location = function() {
-        if ( !(this instanceof Location) ) return new Location();
-        this.lat  = "";
-        this.lng  = "";
-        this.name = "";
-      };
-      $ionicModal.fromTemplateUrl('templates/addLocation.html', {
+      
+      $ionicModal.fromTemplateUrl('templates/detail.html', {
         scope: $scope,
         animation: 'slide-in-up'
       }).then(function(modal) {
