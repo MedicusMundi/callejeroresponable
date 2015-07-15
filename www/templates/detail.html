@@ -1,0 +1,25 @@
+<ion-modal-view>
+  <ion-header-bar class="bar-calm">
+
+    <h1 class="title">Ficha Comercio</h1>
+
+    <div class="buttons">
+      <button class="button button-clear" ng-click="modal.hide()">Cerrar</button>
+    </div>
+
+  </ion-header-bar>
+
+  <ion-content class="padding">
+    <h3>Nombre</h3>
+    {{comercio.nombre}}
+    <h3>Dirección</h3>
+    {{comercio.direccion}}
+    <h3>Telñefono</h3>
+    {{comercio.telefono}}
+    <h3>Ver en el mapa</h3>
+    <button class="button button-clear" ng-click="modal.hide()">Ver</button>
+    
+    
+  </ion-content>
+
+</ion-modal-view>

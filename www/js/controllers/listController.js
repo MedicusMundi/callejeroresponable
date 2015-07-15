@@ -16,9 +16,14 @@ angular.module('starter').controller('ListController',
        */
       $scope.$on("$stateChangeSuccess", function() {		
 		console.log("Hemos cambiado a la vista de lista")
-		$scope.locations = ComerciosService;
+		$scope.comercios = ComerciosService;
       });
 
+      $scope.viewDetail = function(id) {
+          console.log("Mostramos la ficha");
+          $scope.comercio = $scope.comercios[3];
+          $scope.modal.show()
+      };
       
       $ionicModal.fromTemplateUrl('templates/detail.html', {
         scope: $scope,

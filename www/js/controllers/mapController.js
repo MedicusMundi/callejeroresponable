@@ -52,16 +52,27 @@ angular.module('starter').controller('MapController',
             }
           }
         };
-        console.log(ComerciosService);
-        for (comercio in ComerciosService) {
-			console.log("Añadiendo comercio");
-			$scope.map.markers[comercio.id] = {
-			  lat:comercio.lat,
-			  lng:comercio.lng,
-			  message: comercio.nombre ,
+        //console.log(ComerciosService);
+        
+        //console.log(ComerciosService[0].nombre);
+        angular.forEach(ComerciosService, function(comercio,indice) {
+            
+			//~ console.log("Añadiendo comercio "+indice+" "+comercio.nombre);
+            //~ console.log(comercio.lat+","+comercio.lon);
+			$scope.map.markers[indice] = {
+                //FIXME el json está mal???
+			  //~ lat: comercio.lon,
+			  //~ lng: comercio.lat,
+              lat : Number(comercio.lon),
+              lng : Number(comercio.lat),
+			  message: "<h4>"+comercio.nombre+"</h4><br />"+comercio.direccion+"<br /><a href='tel:comercio.telefono'>"+comercio.telefono+"</a>" ,
 			  draggable: false
 			};
-		}
+            //~ console.log(typeof($scope.map.markers[indice].lat));
+            //~ console.log(typeof($scope.map.markers[indice].lng));
+            //~ console.log("Lat "+$scope.map.markers[indice].lat);
+            //~ console.log("Long "+$scope.map.markers[indice].lng);
+		});
 
         //$scope.goTo(0);
         console.log("Centramos el mapa en vito");
@@ -80,12 +91,12 @@ angular.module('starter').controller('MapController',
         this.name = "";
       };
 
-      $ionicModal.fromTemplateUrl('templates/addLocation.html', {
-        scope: $scope,
-        animation: 'slide-in-up'
-      }).then(function(modal) {
-          $scope.modal = modal;
-        });
+      //~ $ionicModal.fromTemplateUrl('templates/addLocation.html', {
+        //~ scope: $scope,
+        //~ animation: 'slide-in-up'
+      //~ }).then(function(modal) {
+          //~ $scope.modal = modal;
+        //~ });
 
       /**
        * Detect user long-pressing on map to add new location

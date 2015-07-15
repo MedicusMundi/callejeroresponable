@@ -11,8 +11,8 @@
   
   <ion-list>
 
-        <ion-item href="" ng-repeat="(locationKey,location) in comercios track by location.nombre">
-          
+        <ion-item ng-click="viewDetail()" ng-repeat="(comercioKey, comercio) in comercios track by comercio.lon">
+          {{comercio.nombre}}({{comercio.direccion}})
         </ion-item>
       </ion-list>
 
