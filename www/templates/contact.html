@@ -1,0 +1,31 @@
+<ion-view title="Contacto">
+
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left"class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+
+  
+
+  <ion-content data-tap-disabled="true">
+
+	  <form id="mail">
+	  <ons-list-item>
+	  		<p><label class="primeracaja">Email</label>
+				<input class="cajas" type="email" name="email" id="email" required /></p>
+	  </ons-list-item>
+	  <ons-list-item>
+	  		<p><label>Asunto</label>
+				<input class="cajas" type="text" name="asunto" id="asunto" required /></p>
+	  </ons-list-item>
+	  <ons-list-item>
+	  		<label>Mensaje</label>
+				<textarea name="mensaje" id="mensaje"></textarea>
+	  </ons-list-item>
+	  <ons-list-item>	  <input id="contacto"  type="button" value="Enviar"/></ons-list-item>
+		</form>
+	</ons-list>
+	 <div id="resultado"></div>
+
+  </ion-content>
+
+</ion-view>

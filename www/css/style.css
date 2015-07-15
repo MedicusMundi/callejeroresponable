@@ -18,3 +18,236 @@ body {
 .tabs.border-top {
   border-top: 1px solid #ddd !important;
 }
+
+/* pagina de información*/
+
+#info_ayuda{
+
+width: 100%;
+float: left;
+
+
+}
+
+h2#info_ayuda_cat{
+
+margin-top: 50px;
+
+}
+
+#info_ayuda h2{
+
+	text-align: center;
+	font-size: 1.4em;
+	font-weight: bold;
+}
+
+#ayuda_cat{
+	
+	width:100%;
+	float: left;
+	text-align: center;
+	color:white;
+	margin-top: -10px;
+
+}
+
+#ayuda_cat div{
+
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+}
+
+#ayuda_cat .info_ali{
+
+background:#BF359A;
+
+}
+
+#ayuda_cat .info_ropa{
+
+background:#664491;
+
+}
+
+#ayuda_cat .info_artesania{
+
+background:#F35B4B;
+
+}
+
+#ayuda_cat .info_bar{
+
+background:#1D8270;
+
+}
+
+#ayuda_cat .info_feria{
+
+background:#B3DD31;
+
+}
+
+#ayuda_cat .info_ofi{
+
+background:#F9A642;
+
+}
+
+#ayuda_cat .info_limpieza{
+
+background:#6EC84B;
+
+}
+
+#ayuda_cat .info_otros{
+
+background:#C41F40;
+
+}
+
+
+#ayuda_clasi{
+
+width:100%;
+float: left;
+
+
+}
+
+#ayuda_clasi p {
+
+		color:#666;
+		text-transform: lowercase;
+		padding-left: 5px;
+		padding-right: 5px;
+}
+
+#ayuda_clasi p#clasi1 {
+
+		margin-top: -20px;
+}
+
+#ayuda_clasi p span{
+
+		color:#78cd6a;
+		font-weight: bold;
+		font-size: 1em;
+		padding-right: 10px;
+		text-transform: uppercase;
+}
+
+
+#ayuda_clasi p img{
+
+	padding-right: 5px;
+
+}
+
+
+form#mail{
+
+	width: 98%;
+	height:auto;
+	margin: 0 auto;
+	padding: 0 1%;
+	box-shadow: 5px 5px 0 #AAA;
+	border-radius:5px; 
+
+}
+
+
+form#mail input{
+
+	width:98%;
+	height:40px;
+	margin:5px 0 10px 0;
+	font-size: 1.5em;
+
+}
+
+form#mail input.cajas{
+
+	border-top:2px inset #666;
+}
+
+form#mail label.primeracaja{
+
+	margin-top:20px;
+}
+
+
+form#mail textarea{
+
+	width:98%;
+	height:100px;
+	margin:5px 0 10px 0;
+	font-size: 1.5em;
+	border:2px inset;
+	
+}
+
+
+form#mail input[type=submit]{
+
+	background-color: #78cd6a;
+	height:50px;
+	width:98%;
+	font-weight: bold;
+	letter-spacing: 2px;
+	color:#FFFFFF;
+	font-size: 1.5em;
+}
+
+form#mail input:focus, form#mail textarea:focus{
+
+	border:2px solid #78cd6a;
+
+
+}
+
+#resultado{
+	text-align: center;
+	padding-top: 10px;
+}
+
+.rojo{
+	color: #D61515;
+}
+
+.negro{
+		
+	color:#666;
+}
+
+.desktop_icon {
+	
+	color: #78cd6a;
+	font-size: 2em;
+	
+}
+
+.button--light {
+ border: 0px;
+ }
+
+form#fListado select {
+	width: 98%;
+	color: #78cd6a;
+	background-color: #E6EBE7;
+	margin-top: 40px;
+	font-size: 2em;
+	
+}
+
+#checkbox_etiquetas,#checkbox_etiquetas2{
+
+width: 98%;
+height:60px;
+font-size: 1em;
+text-transform: lowercase;
+padding-left: 20px;
+padding-top: 20px;
+
+}

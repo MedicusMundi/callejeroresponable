@@ -47,7 +47,24 @@ angular.module('starter', ['ionic', 'leaflet-directive', 'ngCordova', 'igTruncat
           }
         }
       })
-
+	.state('app.about', {
+        url: "/about",
+        views: {
+          'menuContent' :{
+            templateUrl: "templates/about.html",
+            //controller: 'AboutController'
+          }
+        }
+      })
+	.state('app.contact', {
+        url: "/contact",
+        views: {
+          'menuContent' :{
+            templateUrl: "templates/contact.html",
+            //controller: 'ContactController'
+          }
+        }
+      })
     $urlRouterProvider.otherwise('/app/map');
 
   });

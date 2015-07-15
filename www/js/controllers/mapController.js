@@ -20,21 +20,21 @@ angular.module('starter').controller('MapController',
        * Once state loaded, get put map on scope.
        */
       $scope.$on("$stateChangeSuccess", function() {
-
+		console.log("Hemos cambiado a mapa");
         $scope.locations = LocationsService.savedLocations;
         $scope.newLocation;
 
-        if(!InstructionsService.instructions.newLocations.seen) {
-
-          var instructionsPopup = $ionicPopup.alert({
-            title: 'Add Locations',
-            template: InstructionsService.instructions.newLocations.text
-          });
-          instructionsPopup.then(function(res) {
-            InstructionsService.instructions.newLocations.seen = true;
-            });
-
-        }
+        //~ if(!InstructionsService.instructions.newLocations.seen) {
+//~ 
+          //~ var instructionsPopup = $ionicPopup.alert({
+            //~ title: 'Add Locations',
+            //~ template: InstructionsService.instructions.newLocations.text
+          //~ });
+          //~ instructionsPopup.then(function(res) {
+            //~ InstructionsService.instructions.newLocations.seen = true;
+            //~ });
+//~ 
+        //~ }
 
         $scope.map = {
           defaults: {
@@ -51,7 +51,13 @@ angular.module('starter').controller('MapController',
           }
         };
 
-        $scope.goTo(0);
+        //$scope.goTo(0);
+        console.log("Centramos el mapa en vito");
+        $scope.map.center  = {
+          lat : "42.847363",
+          lng : "-2.6734835",
+          zoom : 12
+        };
 
       });
 
