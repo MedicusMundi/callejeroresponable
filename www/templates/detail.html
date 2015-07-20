@@ -15,11 +15,16 @@
     <h3>Dirección</h3>
     {{comercio.direccion}}
     <h3>Tipo productos</h3>
-    <p class='tLocal'><span >local</span></p>
+    <p class='tLocal'       ng-if="comercio.cLocal      == 1" ><span >Local</span></p>
+    <p class='tEcologico'   ng-if="comercio.cEcologico  == 1" ><span >Ecologico</span></p>
+    <p class='tComercio'    ng-if="comercio.cComercio   == 1" ><span >Comercio</span></p>
+    <p class='tSegunda'     ng-if="comercio.cSegunda    == 1" ><span >Segunda</span></p>
+    <p class='tReparar'     ng-if="comercio.cReparar    == 1" ><span >Reparar</span></p>
+    <p class='tMujer'       ng-if="comercio.cMujer      == 1" ><span >Mujer</span></p>
     <h3>Teléfono</h3>
     {{comercio.telefono}}
-    <a href="#/app/detailmap/{{comercio.id_comercio}}/">Ver en el mapa</a>
-    <button class="button button-clear" ng-click="modal.hide()">Listo</button>
+    <!-- <a href="#/app/detailmap/{{comercio.id_comercio}}/">Ver en el mapa</a> -->
+    <!-- <button class="button button-clear" ng-click="modal.hide()">Listo</button> -->
     
     
   </ion-content>

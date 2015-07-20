@@ -6,7 +6,7 @@
 
   
 
-  <ion-content data-tap-disabled="true">
+  <ion-content>
 	<form id="fListado">
 		<select ng-model="filtro.categoria" >
 			<option class="primera" value="">Todos</option>
@@ -19,26 +19,24 @@
 			<option value="7">Ropa y Calzado</option>
 			<option value="8">Otros</option>
 		</select>
-		<!-- mirar: http://jsfiddle.net/65Pyj/ 
-					http://stackoverflow.com/questions/21058284/filter-array-using-checkboxes-with-angularjs
-					http://jsfiddle.net/rzgWr/12/
-		<div id="checkbox_etiquetas">	
-			<input type="checkbox" value="1" id="tag1"  name="tip" class="custom-checkbox" onchange="app.refrescarListaComercios();">
+
+        <div id="checkbox_etiquetas">	
+			<input type="checkbox" value="1" id="tag1"  name="tip" class="custom-checkbox" ng-model="filtro.cLocal" ng-true-value="1" ng-false-value="0">
 			<label for="tag1">Local&nbsp;&nbsp;</label>
-			<input type="checkbox" value="3" id="tag3" name="tip" class="custom-checkbox" onchange="app.refrescarListaComercios();">
+			<input type="checkbox" value="3" id="tag3" name="tip" class="custom-checkbox" ng-model="filtro.cComercio" ng-true-value="1" ng-false-value="0">
 			<label for="tag3">Comercio Justo</label>
-			<input type="checkbox" value="2" id="tag2" name="tip" class="custom-checkbox" onchange="app.refrescarListaComercios();">
+			<input type="checkbox" value="2" id="tag2" name="tip" class="custom-checkbox" ng-model="filtro.cEcologico" ng-true-value="1" ng-false-value="0>
 			<label for="tag2">Ecológico</label>
 		</div>
 		<div id="checkbox_etiquetas2">
-			<input type="checkbox" value="6" id="tag6" name="tip" class="custom-checkbox" onchange="app.refrescarListaComercios();">
+			<input type="checkbox" value="6" id="tag6" name="tip" class="custom-checkbox" ng-model="filtro.cMujer" ng-true-value="1" ng-false-value="0">
 			<label for="tag6">Mujer</label>		
-			<input type="checkbox" value="4" id="tag4" name="tip" class="custom-checkbox" onchange="app.refrescarListaComercios();">
+			<input type="checkbox" value="4" id="tag4" name="tip" class="custom-checkbox" ng-model="filtro.cSegunda" ng-true-value="1" ng-false-value="0">
 			<label for="tag4">Segunda Mano</label>
-			<input type="checkbox" value="5" id="tag5" name="tip" class="custom-checkbox" onchange="app.refrescarListaComercios();">
+			<input type="checkbox" value="5" id="tag5" name="tip" class="custom-checkbox" ng-model="filtro.cReparar" ng-true-value="1" ng-false-value="0">
 			<label for="tag5">Reparar/Reciclar</label>
 		</div>
-		-->
+
 	</form>
 
   
