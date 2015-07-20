@@ -4,6 +4,7 @@ angular.module('starter').controller('MapController',
     '$stateParams',
     '$ionicModal',
     '$ionicPopup',
+    '$http',
     'LocationsService',
     'ComerciosService',
     'InstructionsService',
@@ -13,6 +14,7 @@ angular.module('starter').controller('MapController',
       $stateParams,
       $ionicModal,
       $ionicPopup,
+      $http,
       LocationsService,
       ComerciosService,
       InstructionsService
@@ -55,23 +57,22 @@ angular.module('starter').controller('MapController',
         //console.log(ComerciosService);
         
         //console.log(ComerciosService[0].nombre);
+        
         angular.forEach(ComerciosService, function(comercio,indice) {
             
 			//~ console.log("Añadiendo comercio "+indice+" "+comercio.nombre);
             //~ console.log(comercio.lat+","+comercio.lon);
-			$scope.map.markers[indice] = {
-                //FIXME el json está mal???
-			  //~ lat: comercio.lon,
-			  //~ lng: comercio.lat,
-              lat : Number(comercio.lon),
-              lng : Number(comercio.lat),
-			  message: "<h4>"+comercio.nombre+"</h4><br />"+comercio.direccion+"<br /><a href='tel:comercio.telefono'>"+comercio.telefono+"</a>" ,
-			  draggable: false
+			$scope.map.markers[indice] = {    
+				lng : Number(comercio.longitud),
+				lat : Number(comercio.latitud),
+				message: "<span ng-click='viewDetail({{comercio.id_comercio}})';>"+comercio.nombre+"</span> <a href='tel:comercio.telefono'>"+comercio.telefono+"</a></div><br />"+
+				comercio.direccion+"<br />",
+				draggable: false
 			};
+			//~ console.log("Lat "+$scope.map.markers[indice].lat);
             //~ console.log(typeof($scope.map.markers[indice].lat));
-            //~ console.log(typeof($scope.map.markers[indice].lng));
-            //~ console.log("Lat "+$scope.map.markers[indice].lat);
             //~ console.log("Long "+$scope.map.markers[indice].lng);
+            //~ console.log(typeof($scope.map.markers[indice].lng));
 		});
 
         //$scope.goTo(0);
@@ -113,6 +114,18 @@ angular.module('starter').controller('MapController',
         $scope.modal.hide();
         $scope.goTo(LocationsService.savedLocations.length - 1);
       };
+      $scope.viewDetail = function(id) {
+		console.log("Mostramos la ficha del comercio "+id);
+          $scope.comercio = $scope.comercios[3];
+          $scope.modal.show()
+      };
+      
+      $ionicModal.fromTemplateUrl('templates/detail.html', {
+        scope: $scope,
+        animation: 'slide-in-up'
+      }).then(function(modal) {
+          $scope.modal = modal;
+        });
 
       /**
        * Center map on specific saved location

@@ -14,10 +14,12 @@
     {{comercio.nombre}}
     <h3>Dirección</h3>
     {{comercio.direccion}}
-    <h3>Telñefono</h3>
+    <h3>Tipo productos</h3>
+    <p class='tLocal'><span >local</span></p>
+    <h3>Teléfono</h3>
     {{comercio.telefono}}
-    <h3>Ver en el mapa</h3>
-    <button class="button button-clear" ng-click="modal.hide()">Ver</button>
+    <a href="#/app/detailmap/{{comercio.id_comercio}}/">Ver en el mapa</a>
+    <button class="button button-clear" ng-click="modal.hide()">Listo</button>
     
     
   </ion-content>
