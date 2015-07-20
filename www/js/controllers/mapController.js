@@ -65,8 +65,10 @@ angular.module('starter').controller('MapController',
 			$scope.map.markers[indice] = {    
 				lng : Number(comercio.longitud),
 				lat : Number(comercio.latitud),
-				message: "<span ng-click='viewDetail({{comercio.id_comercio}})';>"+comercio.nombre+"</span> <a href='tel:comercio.telefono'>"+comercio.telefono+"</a></div><br />"+
-				comercio.direccion+"<br />",
+                icon: icons[Number(comercio.categoria)],
+				message: "<span ng-click='viewDetail({{comercio.id_comercio}})';>"+comercio.nombre+"</span><br />"+
+				comercio.direccion+"<br />"+
+                "<a href='tel:comercio.telefono'>"+comercio.telefono+"</a></div><br />",
 				draggable: false
 			};
 			//~ console.log("Lat "+$scope.map.markers[indice].lat);
@@ -91,7 +93,40 @@ angular.module('starter').controller('MapController',
         this.lng  = "";
         this.name = "";
       };
-
+     var icons = {
+        1 :  {
+            iconUrl: 'img/alimentacion_marker-icon.png',
+            iconRetinaUrl: 'img/alimentacion_marker-icon-2x.png',
+            },
+        2 :  {
+            iconUrl: 'img/artesania_marker-icon.png',
+            iconRetinaUrl: 'img/artesania_marker-icon-2x.png',
+            },
+        3 :  {
+            iconUrl: 'img/mercados_marker-icon.png',
+            iconRetinaUrl: 'img/mercados_marker-icon-2x.png',
+            },				
+        4 :  {
+            iconUrl: 'img/limpieza_marker-icon.png',
+            iconRetinaUrl: 'img/limpieza_marker-icon-2x.png',
+            },
+        5 :  {
+            iconUrl: 'img/oficina_marker-icon.png',
+            iconRetinaUrl: 'img/oficina_marker-icon-2x.png',
+            },							
+        6 :  {
+            iconUrl: 'img/restaurante_marker-icon.png',
+            iconRetinaUrl: 'img/restaurante_marker-icon-2x.png',
+            },							
+        7 :  {
+            iconUrl: 'img/ropa_marker-icon.png',
+            iconRetinaUrl: 'img/ropa_marker-icon-2x.png',
+            },						
+        8 :  {
+            iconUrl: 'img/otros_marker-icon.png',
+            iconRetinaUrl: 'img/otros_marker-icon-2x.png',
+            }	
+     }
       //~ $ionicModal.fromTemplateUrl('templates/addLocation.html', {
         //~ scope: $scope,
         //~ animation: 'slide-in-up'
