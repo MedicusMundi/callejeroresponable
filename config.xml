@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <widget id="com.ionicframework.callejeroresponable493453" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>callejeroresponable</name>
+  <name>Callejero Responsable Gasteiz</name>
   <description>
-        An Ionic Framework and Cordova project.
+        La aplicación Callejero Responsable Gasteiz, te ayuda a encontrar los comercios de Vitoria-Gasteiz, donde podrás realizar un consumo consciente y responsable y que forman parte del comercio justo.
     </description>
-  <author email="hi@ionicframework" href="http://ionicframework.com/">
-      Ionic Framework Team
+    <author email="raulperez0481@gmail.com" href="">
+      Raul Perez Caballero
     </author>
+    <author email="jonlatorremartinez@gmail.com" href="http://www.etxea.net/">
+      Jon Latorre
+    </author>
+    
   <content src="index.html"/>
   <access origin="*"/>
   <preference name="webviewbounce" value="false"/>
