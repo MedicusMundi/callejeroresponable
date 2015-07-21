@@ -59,7 +59,10 @@ angular.module('starter').controller('MapController',
         //console.log(ComerciosService[0].nombre);
         
         angular.forEach(ComerciosService, function(comercio,indice) {
-            
+			//Evitamos comercios sin categoria
+            if (comercio.categoria == "") {
+				comercio.categoria=1;
+			}
 			//~ console.log("Añadiendo comercio "+indice+" "+comercio.nombre);
             //~ console.log(comercio.lat+","+comercio.lon);
 			$scope.map.markers[indice] = {    
@@ -71,6 +74,8 @@ angular.module('starter').controller('MapController',
                 "<a href='tel:comercio.telefono'>"+comercio.telefono+"</a></div><br />",
 				draggable: false
 			};
+			//~ console.log("Tenemos la categoria: "+comercio.categoria);
+			//~ console.log("Tenemos el icono: "+icons[Number(comercio.categoria)]);
 			//~ console.log("Lat "+$scope.map.markers[indice].lat);
             //~ console.log(typeof($scope.map.markers[indice].lat));
             //~ console.log("Long "+$scope.map.markers[indice].lng);
