@@ -70,7 +70,7 @@ angular.module('starter', ['ionic', 'leaflet-directive', 'ngCordova','igTruncate
         views: {
           'menuContent' :{
             templateUrl: "templates/contact.html",
-            //controller: 'ContactController'
+            controller: 'ContactController'
           }
         }
       })
