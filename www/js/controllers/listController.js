@@ -15,12 +15,12 @@ angular.module('starter').controller('ListController',
        *
        */
       $scope.$on("$stateChangeSuccess", function() {		
-		console.log("Hemos cambiado a la vista de lista")
+		//~ console.log("Hemos cambiado a la vista de lista")
 		$scope.comercios = ComerciosService;
       });
 
       $scope.viewDetail = function(id) {
-          console.log("Mostramos la ficha del comercio con id "+id);
+          //~ console.log("Mostramos la ficha del comercio con id "+id);
           $scope.comercio = $scope.comercios[id];
           $scope.modal.show()
       };

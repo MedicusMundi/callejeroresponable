@@ -24,7 +24,7 @@ angular.module('starter').controller('MapController',
        * Once state loaded, get put map on scope.
        */
       $scope.$on("$stateChangeSuccess", function() {
-		console.log("Hemos cambiado a mapa");
+		//~ console.log("Hemos cambiado a mapa");
         $scope.locations = ComerciosService.lista;
         $scope.newLocation;
 
@@ -83,7 +83,7 @@ angular.module('starter').controller('MapController',
 		});
 
         //$scope.goTo(0);
-        console.log("Centramos el mapa en vito");
+        //~ console.log("Centramos el mapa en vito");
         $scope.map.center  = {
           lat : 42.847363,
           lng : -2.6734835,
