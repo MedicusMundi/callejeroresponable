@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.ionicframework.callejeroresponable493453" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.etxea.callejeroresponsable" version="0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>Callejero Responsable Gasteiz</name>
   <description>
         La aplicación Callejero Responsable Gasteiz, te ayuda a encontrar los comercios de Vitoria-Gasteiz, donde podrás realizar un consumo consciente y responsable y que forman parte del comercio justo.
