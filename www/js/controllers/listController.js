@@ -21,7 +21,7 @@ angular.module('starter').controller('ListController',
 
       $scope.viewDetail = function(id) {
           //~ console.log("Mostramos la ficha del comercio con id "+id);
-          $scope.comercio = $scope.comercios[id];
+          $scope.comercio = $scope.comercios[id-1];
           $scope.modal.show()
       };
       
